@@ -29,7 +29,7 @@ def calc_shop_list(num_pers, dish_request, recipe_list):
                     shop_list[name]['quantity'] += ingr['quantity'] * num_pers
                 else:
                     shop_list[ingr['ingredient_name']] = {'quantity': ingr['quantity'] * num_pers, 'measure': ingr['measure']}
-    print(shop_list)
+    return shop_list
 
-calc_shop_list(4, ['Омлет', 'Омлет', 'Омлет', 'Запеченный картофель'], assemble_cook_book('recipes.txt'))
+print(calc_shop_list(4, ['Омлет', 'Омлет', 'Омлет', 'Запеченный картофель'], assemble_cook_book('recipes.txt')))
 
